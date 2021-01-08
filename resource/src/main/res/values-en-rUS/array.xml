@@ -2,8 +2,8 @@
 <resources>
     <string-array name="language"
         >
-        <item>选择语言</item>
-        <item>简体中文</item>
-        <item>English</item>
+        <item>change language</item>
+        <item>中文</item>
+        <item>Englisj</item>
     </string-array>
 </resources>
