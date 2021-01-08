@@ -1,2 +1,5 @@
+include ':home'
+include ':usercenter'
+include ':resource'
 include ':app'
 rootProject.name = "MicroOffice"

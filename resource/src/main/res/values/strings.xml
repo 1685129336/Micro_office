@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">微办公</string>
+    <string name="back">返回</string>
+
+    <string name="login_title">登录微办公</string>
+    <string name="login_msg">请使用微办公账号登录</string>
+    <string name="login_username">用户名</string>
+    <string name="login_password">密码</string>
+    <string name="login_auth_code">使用验证码登录</string>
+    <string name="login_to_register">还没账号？ 立即注册</string>
+    <string name="login_button">登录</string>
+    <string name="login_aaa">点击登录代表你已阅读并同意 服务协议 和 隐私政策</string>
+
+    <string name="authCode_title">验证手机号</string>
+    <string name="authCode_msg">请输入发送至 +86 18251519272 的6位验证码有效期十分钟，如未收到，请尝试获取验证码</string>
+    <string name="authCode_number">请输入验证码</string>
+
+    <string name="pwd_title">设置密码</string>
+    <string name="pwd_msg">下次登录可以使用密码或者验证码登录</string>
+    <string name="pwd_username">请输入密码</string>
+    <string name="pwd_password">请再次输入密码</string>
+    <string name="pwd_button">注册</string>
+
+    <string name="phone_title">欢迎使用微办公</string>
+    <string name="phone_msg">请使用微办公账号登录</string>
+    <string name="phone_username">请输入手机号码</string>
+    <string name="phone_button">下一步</string>
+
+    <string name="user_name_title">填写姓名</string>
+    <string name="user_name_msg">为方便大家与你联系，请在下方填写真实姓名。</string>
+    <string name="user_name_username">真实姓名</string>
+    <string name="user_name_button">下一步</string>
+</resources>
