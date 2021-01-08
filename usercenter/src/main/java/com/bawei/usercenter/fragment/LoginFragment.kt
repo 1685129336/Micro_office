@@ -35,6 +35,8 @@ class LoginFragment : BaseMVVMFragment<UserCenterViewModel,FragmentLoginBinding>
         binding.tvRegister.setOnClickListener {
             val userCenterActivity = activity as UserCenterActivity
             userCenterActivity.startFragment(PhoneNumberFragment::class.java,Bundle())
+
+//            userCenterActivity.changeFrag(3)
         }
         binding.tvAuthCodeLogin.setOnClickListener {
             val bundle = Bundle()
