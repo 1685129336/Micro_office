@@ -13,6 +13,7 @@
         android:orientation="vertical"
         >
         <Button
+            android:id="@+id/bt_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="返回"
@@ -21,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="35dp"
-            android:text="填写姓名"
+            android:text="@string/user_name_title"
             android:layout_marginTop="40dp"
             android:layout_marginLeft="20dp"
 
@@ -30,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15sp"
-            android:text="为方便大家与你联系，请在下方填写真实姓名。"
+            android:text="@string/user_name_msg"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             />
@@ -45,7 +46,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="真实姓名"
+                android:hint="@string/user_name_username"
                 />
         </com.google.android.material.textfield.TextInputLayout>
         <RelativeLayout
@@ -53,9 +54,10 @@
             android:layout_height="match_parent"
             >
             <Button
+                android:id="@+id/bt_user_name_next"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="下一步"
+                android:text="@string/user_name_button"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:textSize="20sp"
