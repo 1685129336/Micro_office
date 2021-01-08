@@ -13,15 +13,16 @@
         android:orientation="vertical"
         >
         <Button
+            android:id="@+id/bt_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="返回"
+            android:text="@string/back"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="35dp"
-            android:text="验证手机号"
+            android:text="@string/authCode_title"
             android:layout_marginTop="40dp"
             android:layout_marginLeft="20dp"
 
@@ -30,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15sp"
-            android:text="请输入发送至 +86 18251519272 的6位验证码有效期十分钟，如未收到，请尝试获取验证码"
+            android:text="@string/authCode_msg"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20sp"
@@ -47,7 +48,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="请输入验证码"
+                android:hint="@string/authCode_number"
                 />
         </com.google.android.material.textfield.TextInputLayout>
         <TextView
