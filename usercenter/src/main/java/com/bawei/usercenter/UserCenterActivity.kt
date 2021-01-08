@@ -14,13 +14,18 @@ import java.util.*
 class UserCenterActivity : BaseActivity() {
     var fragments = mutableListOf<Fragment>()
     var pageStack = mutableListOf<Fragment>()
-
+    val loginFragment:LoginFragment=LoginFragment()
+    val phoneNumberFragment:PhoneNumberFragment=PhoneNumberFragment()
+    val authCodeFragment:AuthCodeFragment=AuthCodeFragment()
+    val userNameFragment:UserNameFragment=UserNameFragment()
+    val passwordFragment:PasswordFragment=PasswordFragment()
     override fun initData() {
-        fragments.add(LoginFragment())
-        fragments.add(PhoneNumberFragment())
-        fragments.add(AuthCodeFragment())
-        fragments.add(UserNameFragment())
-        fragments.add(PasswordFragment())
+
+        fragments.add(loginFragment)
+        fragments.add(phoneNumberFragment)
+        fragments.add(authCodeFragment)
+        fragments.add(userNameFragment)
+        fragments.add(passwordFragment)
     }
 
     override fun initView() {
@@ -33,6 +38,19 @@ class UserCenterActivity : BaseActivity() {
     //页面切换
     private fun pageChange(pos: Int, fs: MutableList<Fragment>, flag: Boolean) {
         val transaction = supportFragmentManager.beginTransaction()
+        if(flag){
+
+            transaction.setCustomAnimations(
+                R.anim.slide_right_in,
+                R.anim.slide_left_out
+            )
+        }else{
+            transaction.setCustomAnimations(
+                R.anim.slide_right_out,
+                R.anim.slide_left_in
+            )
+        }
+
         if (pos < fs.size && pos >= 0 && fs.size > 0) {
             fs.forEach { if (it.isAdded) transaction.hide(it) }
             if (fs.get(pos).isAdded) {
@@ -40,10 +58,10 @@ class UserCenterActivity : BaseActivity() {
             } else {
                 transaction.add(R.id.frame_layout, fs.get(pos))
             }
-            transaction.commit()
             if (flag) {
                 pageStack.add(fragments.get(pos))
             }
+            transaction.commit()
         }
     }
     //查询指定的fragment
@@ -82,5 +100,7 @@ class UserCenterActivity : BaseActivity() {
         }
         return false
     }
+
+
 
 }
