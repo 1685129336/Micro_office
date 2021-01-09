@@ -28,6 +28,7 @@
     <string name="phone_msg">please use MO ID Login</string>
     <string name="phone_username">please input phone number</string>
     <string name="phone_button">NEXT</string>
+    <string name="phone_i_read">I have read and agree to the Service Agreement and Privacy Policy</string>
 
     <string name="user_name_title">Name</string>
     <string name="user_name_msg">Please fill in your real name below so that you can be contacted。</string>

@@ -25,9 +25,11 @@
     <string name="phone_msg">请使用微办公账号登录</string>
     <string name="phone_username">请输入手机号码</string>
     <string name="phone_button">下一步</string>
+    <string name="phone_i_read">我已阅读并同意 服务协议 和 隐私政策</string>
 
     <string name="user_name_title">填写姓名</string>
     <string name="user_name_msg">为方便大家与你联系，请在下方填写真实姓名。</string>
     <string name="user_name_username">真实姓名</string>
     <string name="user_name_button">下一步</string>
+
 </resources>

@@ -1,9 +1,11 @@
 package com.bawei.usercenter.fragment
 
 import android.content.Intent
+import android.icu.text.Normalizer2
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.Display
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Toast
@@ -16,6 +18,7 @@ import com.bawei.usercenter.databinding.FragmentLoginBinding
 import com.bawei.usercenter.databinding.FragmentLoginBindingImpl
 import com.bawei.usercenter.fragment.api.FragmentPassByValue
 import com.bawei.usercenter.viewmodel.UserCenterViewModel
+import com.example.common.sp.SPUtil
 import core.ui.BaseFragment
 import core.ui.BaseMVVMFragment
 import kotlinx.android.synthetic.main.fragment_login.*
@@ -23,6 +26,11 @@ import java.util.*
 
 class LoginFragment : BaseMVVMFragment<UserCenterViewModel,FragmentLoginBinding>(),FragmentPassByValue {
     var boolean:Boolean = false
+    var sp:Int = 0
+
+
+
+
     override fun createViewModel(): UserCenterViewModel {
         return ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(UserCenterViewModel::class.java)
     }
@@ -32,6 +40,7 @@ class LoginFragment : BaseMVVMFragment<UserCenterViewModel,FragmentLoginBinding>
     }
 
     override fun initData() {
+
 
     }
 
@@ -50,27 +59,22 @@ class LoginFragment : BaseMVVMFragment<UserCenterViewModel,FragmentLoginBinding>
             bundle.putBoolean("authCode",true)
             ( activity as UserCenterActivity).startFragment(PhoneNumberFragment::class.java,bundle)
         }
+        //选择语言监听
         binding.languageSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(p0: AdapterView<*>?) {
             }
-
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                Log.i("sjz", "onItemSelected: " + 1)
                 if (boolean && p2 == 1) {
-                    Log.i("sjz", "onItemSelected: " + 2)
+                    sp = 1
                     changeAppLanguage(Locale.SIMPLIFIED_CHINESE)
                 }
                 if (boolean && p2 == 2) {
-                    Toast.makeText(context, "" + p2, Toast.LENGTH_SHORT).show()
-                    Log.i("sjz", "onItemSelected: " + 3)
-
+                    sp = 2
                     changeAppLanguage(Locale.US)
-
                 }
                 if (!boolean) {
                     boolean = true
                 }
-
             }
         }
     }
