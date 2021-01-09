@@ -99,8 +99,7 @@
             android:id="@+id/main_yindao"
             android:layout_width="300dp"
             android:layout_height="110dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="600dp"
             android:background="@drawable/home_back_yindao"
             android:padding="10dp">
             <TextView
@@ -156,7 +155,14 @@
                 android:layout_marginBottom="10dp"
                 />
         </RelativeLayout>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/sanjiao"
+            android:layout_below="@+id/main_yindao"
+            android:layout_marginLeft="50dp"
 
+            />
     </RelativeLayout>
 
 </layout>
