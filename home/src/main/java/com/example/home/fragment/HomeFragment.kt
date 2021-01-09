@@ -23,7 +23,7 @@ class HomeFragment: BaseMVVMFragment<HomeViewModel, FragmentHomeBinding>() {
     }
 
     override fun getVariable(): Int {
-        return BR.fragments
+        return BR.viewModel
     }
 
 }

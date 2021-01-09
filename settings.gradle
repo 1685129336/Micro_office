@@ -1,3 +1,4 @@
+include ':linkman'
 include ':home'
 include ':usercenter'
 include ':resource'

@@ -15,6 +15,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_home)
+
         //获取布局
         val menuView = layoutInflater.inflate(R.layout.layout_menu, null)
 
