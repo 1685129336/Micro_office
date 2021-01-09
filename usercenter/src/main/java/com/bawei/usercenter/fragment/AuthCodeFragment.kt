@@ -30,6 +30,18 @@ class AuthCodeFragment : BaseMVVMFragment<UserCenterViewModel,FragmentAuthCodeBi
         binding.btBack.setOnClickListener {
             (activity as UserCenterActivity).goBack()
         }
+
+        binding.authCode01.addEdit(binding.authCode02)
+        binding.authCode02.addEdit(binding.authCode03)
+        binding.authCode03.addEdit(binding.authCode04)
+        binding.authCode04.addEdit(binding.authCode05)
+        binding.authCode05.addEdit(binding.authCode06)
+
+        binding.authCode01.setFinish {
+            (activity as UserCenterActivity).startFragment(PasswordFragment::class.java,Bundle())
+        }
+
+        binding.authCode01.setRegex("123456")
     }
 
     override fun layoutID(): Int {
