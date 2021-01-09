@@ -19,6 +19,7 @@ public class BaseEditTextView extends androidx.appcompat.widget.AppCompatEditTex
     private boolean flag = false;
     private Runnable runnable = null;
     private String regex = null;
+
     public void addEdit(BaseEditTextView editTextView){
         this.next = editTextView;
         editTextView.last = this;
