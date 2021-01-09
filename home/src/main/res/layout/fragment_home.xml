@@ -122,6 +122,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 />
+
             <TextView
                 android:layout_below="@+id/main_message"
                 android:layout_width="wrap_content"
@@ -159,9 +160,8 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@mipmap/sanjiao"
-            android:layout_below="@+id/main_yindao"
             android:layout_marginLeft="50dp"
-
+            android:layout_marginTop="695dp"
             />
     </RelativeLayout>
 
