@@ -12,13 +12,10 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-<<<<<<< HEAD
         if (isHomeDebug.toBoolean()) {
             applicationId "com.example.home"
         }
-=======
         applicationId "com.example.home"
->>>>>>> c2c13381bad49fe4673686155d3280b29ddcdbe4
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
@@ -51,15 +48,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> c2c13381bad49fe4673686155d3280b29ddcdbe4
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-<<<<<<< HEAD
+
 
     kotlinOptions {
         jvmTarget = '1.8'
@@ -69,8 +64,7 @@ android {
         enabled = true
     }
 
-=======
->>>>>>> c2c13381bad49fe4673686155d3280b29ddcdbe4
+
 }
 
 dependencies {

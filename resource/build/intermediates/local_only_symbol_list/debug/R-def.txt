@@ -20,6 +20,7 @@ id english
 menu language_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap yaoqing
 string app_name
 string authCode_msg
 string authCode_number
