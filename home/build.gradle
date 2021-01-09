@@ -1,5 +1,10 @@
-apply plugin: 'com.android.application'
+if (isHomeDebug.toBoolean()) {
+    apply plugin:"com.android.application"
+}else{
+    apply plugin:"com.android.library"
+}
 apply plugin: 'kotlin-android'
+apply plugin:"kotlin-kapt"
 apply plugin: 'kotlin-android-extensions'
 
 android {
@@ -7,13 +12,33 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.home"
+        if (isHomeDebug.toBoolean()) {
+            applicationId "com.example.home"
+        }
         minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        multiDexEnabled true//解除方法65535限制
+
+    }
+
+    sourceSets {
+        main {
+            if (isHomeDebug.toBoolean()) {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            }  else {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+            }
+        }
     }
 
     buildTypes {
@@ -22,6 +47,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    dataBinding{
+        enabled = true
+    }
+
 }
 
 dependencies {
@@ -33,5 +72,21 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation project(path: ':resource')
+
+    implementation('com.alibaba:arouter-api:1.4.1') //ARouter依赖
+    kapt 'com.alibaba:arouter-compiler:1.2.2' //ARouter依赖
+    def commonUtilsVersion = '0.0.9'
+    //公共的工具，图片，日志，自定义适配器
+    implementation "com.github.1685129336.CommonUtils:common:$commonUtilsVersion"
+    //网络
+    implementation "com.github.1685129336.CommonUtils:net:$commonUtilsVersion"
+    //多媒体，音视频，压缩
+    implementation "com.github.1685129336.CommonUtils:media:$commonUtilsVersion"
+    //框架
+    implementation "com.github.1685129336.CommonUtils:mvvmcore:$commonUtilsVersion"
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'//万能适配器
+    implementation 'com.android.support:recyclerview-v7:29.0.0'//recyclerview
 
 }
