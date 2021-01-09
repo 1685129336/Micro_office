@@ -1,0 +1,80 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.bawei.usercenter"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:4:5-66
+11-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:4:22-64
+12
+13    <application
+13-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:5:5-26:19
+14        android:name="androidx.multidex.MultiDexApplication"
+15        android:allowBackup="true"
+15-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:6:9-35
+16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+16-->[androidx.core:core:1.3.2] D:\Androidsss\.gradle\caches\transforms-2\files-2.1\81112976e9a5a57f038e5cfed90af170\core-1.3.2\AndroidManifest.xml:24:18-86
+17        android:debuggable="true"
+18        android:icon="@mipmap/ic_launcher"
+18-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:7:9-43
+19        android:label="@string/app_name"
+19-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:8:9-41
+20        android:roundIcon="@mipmap/ic_launcher_round"
+20-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:9:9-54
+21        android:supportsRtl="true"
+21-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:10:9-35
+22        android:theme="@style/Theme.MicroOffice" >
+22-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:11:9-49
+23        <activity android:name="com.bawei.usercenter.UserCenterActivity" >
+23-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:12:9-18:20
+23-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:12:19-53
+24            <intent-filter>
+24-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:13:13-17:29
+25                <action android:name="android.intent.action.MAIN" />
+25-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:14:17-69
+25-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:14:25-66
+26
+27                <category android:name="android.intent.category.LAUNCHER" />
+27-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:16:17-77
+27-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:16:27-74
+28            </intent-filter>
+29        </activity>
+30
+31        <meta-data
+31-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:20:9-22:35
+32            android:name="design_width_in_dp"
+32-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:21:13-46
+33            android:value="720" />
+33-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:22:13-32
+34        <meta-data
+34-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:23:9-25:36
+35            android:name="design_height_in_dp"
+35-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:24:13-47
+36            android:value="1280" />
+36-->D:\AndroidText\MicroOffice\usercenter\src\main\debug\AndroidManifest.xml:25:13-33
+37
+38        <activity android:name="com.example.media.MediaActivity" >
+38-->[com.github.1685129336.CommonUtils:media:0.0.9] D:\Androidsss\.gradle\caches\transforms-2\files-2.1\7203c6ab3c8fb2c053764c09ebec6fcf\jetified-media-0.0.9\AndroidManifest.xml:11:9-12:20
+38-->[com.github.1685129336.CommonUtils:media:0.0.9] D:\Androidsss\.gradle\caches\transforms-2\files-2.1\7203c6ab3c8fb2c053764c09ebec6fcf\jetified-media-0.0.9\AndroidManifest.xml:11:19-65
+39        </activity>
+40
+41        <provider
+41-->[me.jessyan:autosize:1.2.1] D:\Androidsss\.gradle\caches\transforms-2\files-2.1\c4b16885b7970d7a196f0317f3606c20\jetified-autosize-1.2.1\AndroidManifest.xml:12:9-16:43
+42            android:name="me.jessyan.autosize.InitProvider"
+42-->[me.jessyan:autosize:1.2.1] D:\Androidsss\.gradle\caches\transforms-2\files-2.1\c4b16885b7970d7a196f0317f3606c20\jetified-autosize-1.2.1\AndroidManifest.xml:13:13-60
+43            android:authorities="com.bawei.usercenter.autosize-init-provider"
+43-->[me.jessyan:autosize:1.2.1] D:\Androidsss\.gradle\caches\transforms-2\files-2.1\c4b16885b7970d7a196f0317f3606c20\jetified-autosize-1.2.1\AndroidManifest.xml:14:13-74
+44            android:exported="false"
+44-->[me.jessyan:autosize:1.2.1] D:\Androidsss\.gradle\caches\transforms-2\files-2.1\c4b16885b7970d7a196f0317f3606c20\jetified-autosize-1.2.1\AndroidManifest.xml:15:13-37
+45            android:multiprocess="true" />
+45-->[me.jessyan:autosize:1.2.1] D:\Androidsss\.gradle\caches\transforms-2\files-2.1\c4b16885b7970d7a196f0317f3606c20\jetified-autosize-1.2.1\AndroidManifest.xml:16:13-40
+46    </application>
+47
+48</manifest>
