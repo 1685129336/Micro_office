@@ -1,0 +1,82 @@
+if (isUserCenterDebug.toBoolean()) {
+    apply plugin:"com.android.application"
+}else{
+    apply plugin:"com.android.library"
+}
+    apply plugin:"kotlin-android"
+    apply plugin:"kotlin-kapt"
+    apply plugin:"kotlin-android-extensions"
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        if (isUserCenterDebug.toBoolean()) {
+            applicationId "com.bawei.usercenter"
+        }
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        multiDexEnabled true//解除方法65535限制
+    }
+    sourceSets {
+        main {
+            if (isUserCenterDebug.toBoolean()) {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            }  else {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    dataBinding{
+        enabled = true
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation project(path: ':resource')
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation('com.alibaba:arouter-api:1.4.1') //ARouter依赖
+    kapt 'com.alibaba:arouter-compiler:1.2.2' //ARouter依赖
+    def commonUtilsVersion = '0.0.9'
+    //公共的工具，图片，日志，自定义适配器
+    implementation "com.github.1685129336.CommonUtils:common:$commonUtilsVersion"
+    //网络
+    implementation "com.github.1685129336.CommonUtils:net:$commonUtilsVersion"
+    //多媒体，音视频，压缩
+    implementation "com.github.1685129336.CommonUtils:media:$commonUtilsVersion"
+    //框架
+    implementation "com.github.1685129336.CommonUtils:mvvmcore:$commonUtilsVersion"
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'me.jessyan:autosize:1.2.1'//屏幕适配
+}
