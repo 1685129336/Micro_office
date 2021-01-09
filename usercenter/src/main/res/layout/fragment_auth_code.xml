@@ -37,26 +37,61 @@
             android:layout_marginRight="20sp"
 
             />
-        <com.google.android.material.textfield.TextInputLayout
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="60dp"
+           android:layout_marginLeft="20dp"
+           android:layout_marginRight="20dp"
+           android:layout_marginTop="60dp"
+           >
+           <baseview.BaseEditTextView
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:id="@+id/auth_code_01"
+               />
+           <baseview.BaseEditTextView
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:id="@+id/auth_code_02"
+               />
+           <baseview.BaseEditTextView
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:id="@+id/auth_code_03"
+               />
+           <baseview.BaseEditTextView
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:id="@+id/auth_code_04"
+               />
+           <baseview.BaseEditTextView
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:id="@+id/auth_code_05"
+               />
+           <baseview.BaseEditTextView
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:id="@+id/auth_code_06"
+               />
+       </LinearLayout>
+
+        <Button
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            app:errorTextColor="#D82929"
-            android:layout_marginTop="60dp"
-            >
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/authCode_number"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
             android:text="50秒 后重新获取验证码"
+            android:background="#4AA6EF"
+            android:textColor="#fff"
+            android:id="@+id/bt_auth_code"
             />
 
     </LinearLayout>
