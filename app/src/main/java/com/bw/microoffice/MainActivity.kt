@@ -36,5 +36,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c2c13381bad49fe4673686155d3280b29ddcdbe4
 }

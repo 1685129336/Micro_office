@@ -1,0 +1,4 @@
+#Sat Jan 09 09:33:43 CST 2021
+base.0=D\:\\AndroidText\\MicroOffice\\home\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

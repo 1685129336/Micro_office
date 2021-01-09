@@ -2176,7 +2176,10 @@ int layout text_view_without_line_height 0x7f0c0068
 int menu language_menu 0x7f0d0000
 int mipmap ic_launcher 0x7f0e0000
 int mipmap ic_launcher_round 0x7f0e0001
+<<<<<<< HEAD
 int mipmap yaoqing 0x7f0e0002
+=======
+>>>>>>> c2c13381bad49fe4673686155d3280b29ddcdbe4
 int plurals mtrl_badge_content_description 0x7f0f0000
 int string abc_action_bar_home_description 0x7f100000
 int string abc_action_bar_up_description 0x7f100001
@@ -2278,6 +2281,7 @@ int string path_password_eye_mask_strike_through 0x7f100060
 int string path_password_eye_mask_visible 0x7f100061
 int string path_password_strike_through 0x7f100062
 int string phone_button 0x7f100063
+<<<<<<< HEAD
 int string phone_msg 0x7f100064
 int string phone_title 0x7f100065
 int string phone_username 0x7f100066
@@ -2292,6 +2296,23 @@ int string user_name_button 0x7f10006e
 int string user_name_msg 0x7f10006f
 int string user_name_title 0x7f100070
 int string user_name_username 0x7f100071
+=======
+int string phone_i_read 0x7f100064
+int string phone_msg 0x7f100065
+int string phone_title 0x7f100066
+int string phone_username 0x7f100067
+int string pwd_button 0x7f100068
+int string pwd_msg 0x7f100069
+int string pwd_password 0x7f10006a
+int string pwd_title 0x7f10006b
+int string pwd_username 0x7f10006c
+int string search_menu_title 0x7f10006d
+int string status_bar_notification_info_overflow 0x7f10006e
+int string user_name_button 0x7f10006f
+int string user_name_msg 0x7f100070
+int string user_name_title 0x7f100071
+int string user_name_username 0x7f100072
+>>>>>>> c2c13381bad49fe4673686155d3280b29ddcdbe4
 int style AlertDialog_AppCompat 0x7f110000
 int style AlertDialog_AppCompat_Light 0x7f110001
 int style AndroidThemeColorAccentYellow 0x7f110002

@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "D:\\Micro_office\\linkman\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
             "map": [
                 {
                     "source": "E:\\专高3\\gradle-6.1.1\\caches\\transforms-2\\files-2.1\\4e039017508058e03141616af225b4eb\\appcompat-1.2.0\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+=======
+            "outputFile": "D:\\AndroidText\\MicroOffice\\linkman\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "D:\\Androidsss\\.gradle\\caches\\transforms-2\\files-2.1\\4e039017508058e03141616af225b4eb\\appcompat-1.2.0\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+>>>>>>> c2c13381bad49fe4673686155d3280b29ddcdbe4
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,6 +1,7 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "D:\\Micro_office\\linkman\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
@@ -24,6 +25,12 @@
                 },
                 {
                     "source": "E:\\专高3\\gradle-6.1.1\\caches\\transforms-2\\files-2.1\\4e039017508058e03141616af225b4eb\\appcompat-1.2.0\\res\\values-v23\\values-v23.xml",
+=======
+            "outputFile": "D:\\AndroidText\\MicroOffice\\linkman\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "map": [
+                {
+                    "source": "D:\\Androidsss\\.gradle\\caches\\transforms-2\\files-2.1\\4e039017508058e03141616af225b4eb\\appcompat-1.2.0\\res\\values-v23\\values-v23.xml",
+>>>>>>> c2c13381bad49fe4673686155d3280b29ddcdbe4
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -34,7 +41,11 @@
                     }
                 },
                 {
+<<<<<<< HEAD
                     "source": "E:\\专高3\\gradle-6.1.1\\caches\\transforms-2\\files-2.1\\4b7a94cc44aaf29d12e96580967b0578\\material-1.2.1\\res\\values-v23\\values-v23.xml",
+=======
+                    "source": "D:\\Androidsss\\.gradle\\caches\\transforms-2\\files-2.1\\4b7a94cc44aaf29d12e96580967b0578\\material-1.2.1\\res\\values-v23\\values-v23.xml",
+>>>>>>> c2c13381bad49fe4673686155d3280b29ddcdbe4
                     "from": {
                         "startLines": "2,6",
                         "startColumns": "4,4",
@@ -51,6 +62,28 @@
                         "endColumns": "10,10",
                         "endOffsets": "3934,4207"
                     }
+<<<<<<< HEAD
+=======
+                },
+                {
+                    "source": "D:\\Androidsss\\.gradle\\caches\\transforms-2\\files-2.1\\ae0d43a8cd9e2d0dca0ee7612d373384\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "200"
+                    },
+                    "to": {
+                        "startLines": "50",
+                        "startColumns": "4",
+                        "startOffsets": "3524",
+                        "endLines": "52",
+                        "endColumns": "12",
+                        "endOffsets": "3669"
+                    }
+>>>>>>> c2c13381bad49fe4673686155d3280b29ddcdbe4
                 }
             ]
         }
