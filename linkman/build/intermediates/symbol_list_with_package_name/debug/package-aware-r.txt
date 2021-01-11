@@ -2177,10 +2177,7 @@ layout text_view_without_line_height
 menu language_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
-<<<<<<< HEAD
 mipmap yaoqing
-=======
->>>>>>> c2c13381bad49fe4673686155d3280b29ddcdbe4
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -2282,10 +2279,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string phone_button
-<<<<<<< HEAD
-=======
 string phone_i_read
->>>>>>> c2c13381bad49fe4673686155d3280b29ddcdbe4
 string phone_msg
 string phone_title
 string phone_username
