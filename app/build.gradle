@@ -63,8 +63,8 @@ dependencies {
 //    //多媒体，音视频，压缩
 //    implementation "com.github.1685129336.CommonUtils:media:$commonUtilsVersion"
 
-    
+
     implementation 'com.android.support:multidex:1.0.3'
-    implementation "me.jessyan:autosize:${d.autosize}"//屏幕适配
+//    implementation "me.jessyan:autosize:${d.autosize}"//屏幕适配
 
 }
