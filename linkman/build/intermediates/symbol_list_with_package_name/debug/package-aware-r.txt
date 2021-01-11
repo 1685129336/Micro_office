@@ -1597,13 +1597,20 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable edit_background
 drawable edit_border
+drawable ic_add_friends
+drawable ic_add_friends_blue
+drawable ic_group
+drawable ic_head
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_message
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_phone
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
 drawable material_ic_edit_black_24dp
@@ -1635,6 +1642,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable sample_footer_loading
 drawable sample_footer_loading_progress
+drawable search
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1843,9 +1851,22 @@ id labeled
 id largeLabel
 id layout
 id left
+id letter_item_text
+id letter_item_vertical_text
 id line1
 id line3
 id linear
+id linkman_f_addfriends_img
+id linkman_f_addfriends_text
+id linkman_f_letter_rv
+id linkman_f_mygroup_img
+id linkman_f_mygroup_text
+id linkman_f_persion_rv
+id linkman_item_img
+id linkman_item_message
+id linkman_item_name
+id linkman_item_num
+id linkman_view
 id listMode
 id list_item
 id ll_tap
@@ -2120,7 +2141,10 @@ layout layout_tab_left
 layout layout_tab_right
 layout layout_tab_segment
 layout layout_tab_top
+layout letter_item_layout
+layout letter_item_vertical_layout
 layout linkman_fragment_layout
+layout linkman_item_layout
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -2177,10 +2201,7 @@ layout text_view_without_line_height
 menu language_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
-<<<<<<< HEAD
 mipmap yaoqing
-=======
->>>>>>> c2c13381bad49fe4673686155d3280b29ddcdbe4
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -2282,10 +2303,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string phone_button
-<<<<<<< HEAD
-=======
 string phone_i_read
->>>>>>> c2c13381bad49fe4673686155d3280b29ddcdbe4
 string phone_msg
 string phone_title
 string phone_username

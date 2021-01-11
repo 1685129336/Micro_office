@@ -81,7 +81,6 @@ public class LinkManFragment extends Fragment {
     }
 
     public List<String> getEnglishLetter(){
-        Log.d("zf","=====================================");
         if (letterList.size()!=26){
             char a = 'A';
             for (int i = 1; i <=26; i++) {

@@ -12,9 +12,16 @@ color purple_700
 color teal_200
 color teal_700
 color white
+drawable edit_background
 drawable edit_border
+drawable ic_add_friends
+drawable ic_add_friends_blue
+drawable ic_group
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_message
+drawable ic_phone
+drawable search
 id chinese
 id english
 menu language_menu
