@@ -1,17 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
             "outputFile": "D:\\study\\android_studio\\project\\Micro_office\\usercenter\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
             "map": [
                 {
                     "source": "D:\\study\\android_studio\\gradle\\caches\\transforms-2\\files-2.1\\a1fad3b75b10aea3b37715520d4c09df\\jetified-SmartRefreshLayout-1.1.0\\res\\values-zh\\values-zh.xml",
-=======
-            "outputFile": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-2\\files-2.1\\d1c31a6dbfc66a4299e650ca97df2d0f\\jetified-SmartRefreshLayout-1.1.0\\res\\values-zh\\values-zh.xml",
->>>>>>> f27cec377e3546e11cca1cf73795603d92569562
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -69,8 +69,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation("com.alibaba:arouter-api:${d.arouter}") //ARouter依赖
-    kapt "com.alibaba:arouter-compiler:${d.arouter_complier}" //ARouter依赖
+    implementation("com.alibaba:arouter-api:$d.arouter") //ARouter依赖
+    kapt "com.alibaba:arouter-compiler:$d.arouter_compiler" //ARouter依赖
     def commonUtilsVersion = d.commonUtilsVersion
     //公共的工具，图片，日志，自定义适配器
     implementation "com.github.1685129336.CommonUtils:common:$commonUtilsVersion"

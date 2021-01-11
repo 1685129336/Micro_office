@@ -43,8 +43,8 @@
 26            </intent-filter>
 27        </activity>
 28        <activity android:name="com.example.media.MediaActivity" >
-28-->[com.github.1685129336.CommonUtils:media:0.0.9] D:\study\android_studio\gradle\caches\transforms-2\files-2.1\7203c6ab3c8fb2c053764c09ebec6fcf\jetified-media-0.0.9\AndroidManifest.xml:11:9-12:20
-28-->[com.github.1685129336.CommonUtils:media:0.0.9] D:\study\android_studio\gradle\caches\transforms-2\files-2.1\7203c6ab3c8fb2c053764c09ebec6fcf\jetified-media-0.0.9\AndroidManifest.xml:11:19-65
+28-->[com.github.1685129336.CommonUtils:media:1.0.3] D:\study\android_studio\gradle\caches\transforms-2\files-2.1\7203c6ab3c8fb2c053764c09ebec6fcf\jetified-media-0.0.9\AndroidManifest.xml:11:9-12:20
+28-->[com.github.1685129336.CommonUtils:media:1.0.3] D:\study\android_studio\gradle\caches\transforms-2\files-2.1\7203c6ab3c8fb2c053764c09ebec6fcf\jetified-media-0.0.9\AndroidManifest.xml:11:19-65
 29        </activity>
 30    </application>
 31

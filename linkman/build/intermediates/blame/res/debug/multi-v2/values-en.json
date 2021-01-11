@@ -1,17 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
             "outputFile": "D:\\study\\android_studio\\project\\Micro_office\\linkman\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en\\values-en.xml",
             "map": [
                 {
                     "source": "D:\\study\\android_studio\\gradle\\caches\\transforms-2\\files-2.1\\61d440e10073c5de86b309e6158592c2\\jetified-BaseRecyclerViewAdapterHelper-2.9.22\\res\\values-en\\values-en.xml",
-=======
-            "outputFile": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en\\values-en.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-2\\files-2.1\\3bdc06074e2af1c895ccb4cbb8ac09aa\\jetified-BaseRecyclerViewAdapterHelper-2.9.22\\res\\values-en\\values-en.xml",
->>>>>>> f27cec377e3546e11cca1cf73795603d92569562
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

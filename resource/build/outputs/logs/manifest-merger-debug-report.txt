@@ -1,6 +1,5 @@
 -- Merging decision tree log ---
 manifest
-<<<<<<< HEAD
 ADDED from D:\study\android_studio\project\Micro_office\resource\src\main\AndroidManifest.xml:2:1-5:12
 INJECTED from D:\study\android_studio\project\Micro_office\resource\src\main\AndroidManifest.xml:2:1-5:12
 INJECTED from D:\study\android_studio\project\Micro_office\resource\src\main\AndroidManifest.xml:2:1-5:12
@@ -36,40 +35,3 @@ INJECTED from D:\study\android_studio\project\Micro_office\resource\src\main\And
 		INJECTED from D:\study\android_studio\project\Micro_office\resource\src\main\AndroidManifest.xml
 		ADDED from D:\study\android_studio\project\Micro_office\resource\src\main\AndroidManifest.xml
 		INJECTED from D:\study\android_studio\project\Micro_office\resource\src\main\AndroidManifest.xml
-=======
-ADDED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml:2:1-5:12
-INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml:2:1-5:12
-INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml:2:1-5:12
-INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml:2:1-5:12
-INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml:2:1-5:12
-INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml:2:1-5:12
-INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml:2:1-5:12
-	package
-		ADDED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml:3:5-33
-		INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml
-		INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml
-	android:versionName
-		INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml:2:1-5:12
-		INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml
-	android:versionCode
-		INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml:2:1-5:12
-		INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml
-	xmlns:android
-		ADDED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml:2:11-69
-uses-sdk
-INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml
-INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml
-INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml
-INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml
-	android:targetSdkVersion
-		INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml
-		INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml
-	android:minSdkVersion
-		INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml
-		INJECTED from D:\AndroidProjects\2\Micro_office\resource\src\main\AndroidManifest.xml
->>>>>>> f27cec377e3546e11cca1cf73795603d92569562

@@ -1,6 +1,5 @@
 [
     {
-<<<<<<< HEAD
         "merged": "D:\\study\\android_studio\\project\\Micro_office\\usercenter\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_auth_code.xml",
         "source": "D:\\study\\android_studio\\project\\Micro_office\\usercenter\\src\\main\\res\\layout\\fragment_auth_code.xml"
     },
@@ -31,37 +30,5 @@
     {
         "merged": "D:\\study\\android_studio\\project\\Micro_office\\usercenter\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_phone_number.xml",
         "source": "D:\\study\\android_studio\\project\\Micro_office\\usercenter\\src\\main\\res\\layout\\fragment_phone_number.xml"
-=======
-        "merged": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_password.xml",
-        "source": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\src\\main\\res\\layout\\fragment_password.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_login.xml",
-        "source": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\src\\main\\res\\layout\\fragment_login.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_user_center.xml",
-        "source": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\src\\main\\res\\layout\\activity_user_center.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_user_name.xml",
-        "source": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\src\\main\\res\\layout\\fragment_user_name.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_phone_number.xml",
-        "source": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\src\\main\\res\\layout\\fragment_phone_number.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_auth_code.xml",
-        "source": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\src\\main\\res\\layout\\fragment_auth_code.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
-        "source": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\src\\main\\res\\layout\\activity_register.xml"
-    },
-    {
-        "merged": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
-        "source": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\src\\main\\res\\layout\\activity_login.xml"
->>>>>>> f27cec377e3546e11cca1cf73795603d92569562
     }
 ]
