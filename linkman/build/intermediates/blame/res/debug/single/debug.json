@@ -1,10 +1,59 @@
 [
     {
+<<<<<<< HEAD
         "merged": "D:\\study\\android_studio\\project\\Micro_office\\linkman\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "D:\\study\\android_studio\\project\\Micro_office\\linkman\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "D:\\study\\android_studio\\project\\Micro_office\\linkman\\build\\intermediates\\res\\merged\\debug\\layout_linkman_fragment_layout.xml.flat",
         "source": "D:\\study\\android_studio\\project\\Micro_office\\linkman\\src\\main\\res\\layout\\linkman_fragment_layout.xml"
+=======
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_head.png.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_head.png"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_head.png.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_head.png"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\intermediates\\res\\merged\\debug\\layout_letter_item_vertical_layout.xml.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\src\\main\\res\\layout\\letter_item_vertical_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_head.png.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_head.png"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_head.png.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_head.png"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_head.png.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_head.png"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\intermediates\\res\\merged\\debug\\layout_linkman_item_layout.xml.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\src\\main\\res\\layout\\linkman_item_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_head.xml.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_head.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\intermediates\\res\\merged\\debug\\layout_letter_item_layout.xml.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\src\\main\\res\\layout\\letter_item_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_head.png.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_head.png"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\intermediates\\res\\merged\\debug\\layout_linkman_fragment_layout.xml.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\src\\main\\res\\layout\\linkman_fragment_layout.xml"
+>>>>>>> f27cec377e3546e11cca1cf73795603d92569562
     }
 ]

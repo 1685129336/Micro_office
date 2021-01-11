@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "merged": "D:\\study\\android_studio\\project\\Micro_office\\usercenter\\build\\intermediates\\res\\merged\\debug\\layout_fragment_login.xml.flat",
         "source": "D:\\study\\android_studio\\project\\Micro_office\\usercenter\\src\\main\\res\\layout\\fragment_login.xml"
     },
@@ -30,5 +31,37 @@
     {
         "merged": "D:\\study\\android_studio\\project\\Micro_office\\usercenter\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
         "source": "D:\\study\\android_studio\\project\\Micro_office\\usercenter\\src\\main\\res\\layout\\activity_register.xml"
+=======
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\build\\intermediates\\res\\merged\\debug\\layout_fragment_user_name.xml.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\src\\main\\res\\layout\\fragment_user_name.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\build\\intermediates\\res\\merged\\debug\\layout_fragment_password.xml.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\src\\main\\res\\layout\\fragment_password.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\build\\intermediates\\res\\merged\\debug\\layout_fragment_login.xml.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\src\\main\\res\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\build\\intermediates\\res\\merged\\debug\\layout_fragment_auth_code.xml.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\src\\main\\res\\layout\\fragment_auth_code.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\build\\intermediates\\res\\merged\\debug\\layout_fragment_phone_number.xml.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\src\\main\\res\\layout\\fragment_phone_number.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_center.xml.flat",
+        "source": "D:\\AndroidProjects\\2\\Micro_office\\usercenter\\src\\main\\res\\layout\\activity_user_center.xml"
+>>>>>>> f27cec377e3546e11cca1cf73795603d92569562
     }
 ]

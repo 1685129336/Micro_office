@@ -1,6 +1,7 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "D:\\study\\android_studio\\project\\Micro_office\\linkman\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
@@ -24,6 +25,12 @@
                 },
                 {
                     "source": "D:\\study\\android_studio\\gradle\\caches\\transforms-2\\files-2.1\\4b7a94cc44aaf29d12e96580967b0578\\material-1.2.1\\res\\values-night-v8\\values-night-v8.xml",
+=======
+            "outputFile": "D:\\AndroidProjects\\2\\Micro_office\\linkman\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-2\\files-2.1\\4b7a94cc44aaf29d12e96580967b0578\\material-1.2.1\\res\\values-night-v8\\values-night-v8.xml",
+>>>>>>> f27cec377e3546e11cca1cf73795603d92569562
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -40,7 +47,11 @@
                     }
                 },
                 {
+<<<<<<< HEAD
                     "source": "D:\\study\\android_studio\\gradle\\caches\\transforms-2\\files-2.1\\4e039017508058e03141616af225b4eb\\appcompat-1.2.0\\res\\values-night-v8\\values-night-v8.xml",
+=======
+                    "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-2\\files-2.1\\4e039017508058e03141616af225b4eb\\appcompat-1.2.0\\res\\values-night-v8\\values-night-v8.xml",
+>>>>>>> f27cec377e3546e11cca1cf73795603d92569562
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -55,6 +66,28 @@
                         "endColumns": "69,83,83,95,101,101,93,88",
                         "endOffsets": "165,249,333,429,531,633,727,3401"
                     }
+<<<<<<< HEAD
+=======
+                },
+                {
+                    "source": "D:\\AndroidProjects\\2\\Micro_office\\resource\\build\\intermediates\\packaged_res\\debug\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "100",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "818"
+                    },
+                    "to": {
+                        "startLines": "25",
+                        "startColumns": "4",
+                        "startOffsets": "2594",
+                        "endLines": "37",
+                        "endColumns": "12",
+                        "endOffsets": "3312"
+                    }
+>>>>>>> f27cec377e3546e11cca1cf73795603d92569562
                 }
             ]
         }
