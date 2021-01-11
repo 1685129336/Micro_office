@@ -1,0 +1,16 @@
+ext{
+    androidVersion = [
+            compileSdkVersion:30,
+            buildToolsVersion:"30.0.2",
+            minSdkVersion:16,
+            targetSdkVersion:30,
+            versionCode:1,
+            versionName:"1.0"
+    ]
+    dependenciesVersion=[
+            commonUtilsVersion:"1.0.3",
+            arouter:"1.4.1",
+            arouter_compiler:"1.2.2",
+            autosize:"1.2.1"
+    ]
+}
