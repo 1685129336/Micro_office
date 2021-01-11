@@ -1,0 +1,19 @@
+[
+    {
+<<<<<<< HEAD
+        "merged": "D:\\Micro_office\\linkman\\build\\intermediates\\res\\merged\\debug\\layout_linkman_fragment_layout.xml.flat",
+        "source": "D:\\Micro_office\\linkman\\src\\main\\res\\layout\\linkman_fragment_layout.xml"
+    },
+    {
+        "merged": "D:\\Micro_office\\linkman\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\Micro_office\\linkman\\src\\main\\res\\layout\\activity_main.xml"
+=======
+        "merged": "D:\\AndroidText\\MicroOffice\\linkman\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\AndroidText\\MicroOffice\\linkman\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\AndroidText\\MicroOffice\\linkman\\build\\intermediates\\res\\merged\\debug\\layout_linkman_fragment_layout.xml.flat",
+        "source": "D:\\AndroidText\\MicroOffice\\linkman\\src\\main\\res\\layout\\linkman_fragment_layout.xml"
+>>>>>>> c2c13381bad49fe4673686155d3280b29ddcdbe4
+    }
+]

@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+<<<<<<< HEAD
+            "outputFile": "D:\\Micro_office\\linkman\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en\\values-en.xml",
+            "map": [
+                {
+                    "source": "E:\\专高3\\gradle-6.1.1\\caches\\transforms-2\\files-2.1\\aa00991af005ab142f35def044f73aa9\\jetified-BaseRecyclerViewAdapterHelper-2.9.22\\res\\values-en\\values-en.xml",
+=======
+            "outputFile": "D:\\AndroidText\\MicroOffice\\linkman\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en\\values-en.xml",
+            "map": [
+                {
+                    "source": "D:\\Androidsss\\.gradle\\caches\\transforms-2\\files-2.1\\aea6b044e1672ffe48fc33e769d415ab\\jetified-BaseRecyclerViewAdapterHelper-2.9.22\\res\\values-en\\values-en.xml",
+>>>>>>> c2c13381bad49fe4673686155d3280b29ddcdbe4
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,105,162",
+                        "endColumns": "49,56,46",
+                        "endOffsets": "100,157,204"
+                    }
+                }
+            ]
+        }
+    ]
+}

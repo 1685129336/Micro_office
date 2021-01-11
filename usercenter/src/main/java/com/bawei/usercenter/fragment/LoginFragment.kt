@@ -1,24 +1,39 @@
 package com.bawei.usercenter.fragment
 
+import android.content.Intent
+
+import android.os.Build
 import android.os.Bundle
 import android.text.Editable
-import android.util.Log
-import androidx.databinding.ViewDataBinding
+
+import android.view.View
+import android.widget.AdapterView
+
 import androidx.lifecycle.ViewModelProvider
 import com.bawei.usercenter.BR
 import com.bawei.usercenter.R
 import com.bawei.usercenter.UserCenterActivity
 import com.bawei.usercenter.databinding.FragmentLoginBinding
-import com.bawei.usercenter.databinding.FragmentLoginBindingImpl
+
 import com.bawei.usercenter.fragment.api.FragmentPassByValue
 import com.bawei.usercenter.viewmodel.UserCenterViewModel
+
+
 import com.example.common.event.api.IEvent
-import com.example.common.event.listener.Transaction
-import core.ui.BaseFragment
+
+
+
 import core.ui.BaseMVVMFragment
 import kotlinx.android.synthetic.main.fragment_login.*
+import java.util.*
 
 class LoginFragment : BaseMVVMFragment<UserCenterViewModel,FragmentLoginBinding>(),FragmentPassByValue {
+    var boolean:Boolean = false
+    var sp:Int = 0
+
+
+
+
     override fun createViewModel(): UserCenterViewModel {
         return ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(UserCenterViewModel::class.java)
     }
@@ -28,6 +43,7 @@ class LoginFragment : BaseMVVMFragment<UserCenterViewModel,FragmentLoginBinding>
     }
 
     override fun initData() {
+
 
     }
 
@@ -50,6 +66,26 @@ class LoginFragment : BaseMVVMFragment<UserCenterViewModel,FragmentLoginBinding>
             bundle.putBoolean("authCode",true)
             ( activity as UserCenterActivity).startFragment(PhoneNumberFragment::class.java,bundle)
         }
+
+        //选择语言监听
+        binding.languageSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+            }
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                if (boolean && p2 == 1) {
+                    sp = 1
+                    changeAppLanguage(Locale.SIMPLIFIED_CHINESE)
+                }
+                if (boolean && p2 == 2) {
+                    sp = 2
+                    changeAppLanguage(Locale.US)
+                }
+                if (!boolean) {
+                    boolean = true
+                }
+            }
+        }
+
 
         binding.userNameTextChange = object : IEvent.OnTextChangedListener(){
             override fun afterTextChanged(s: Editable?) {
@@ -80,6 +116,7 @@ class LoginFragment : BaseMVVMFragment<UserCenterViewModel,FragmentLoginBinding>
             }
         }
 
+
     }
 
 
@@ -91,4 +128,19 @@ class LoginFragment : BaseMVVMFragment<UserCenterViewModel,FragmentLoginBinding>
 
     }
 
+    //切换语言重新启动APP
+    private fun changeAppLanguage(locale: Locale) {
+        val metrics = resources.displayMetrics
+        val configuration = resources.configuration
+        //判断版本
+        if (Build.VERSION.SDK_INT> Build.VERSION_CODES.JELLY_BEAN_MR1){
+            configuration.setLocale(locale)
+        }else {
+            configuration.locale = locale
+        }
+        resources.updateConfiguration(configuration,metrics)
+        val intent = Intent(context, UserCenterActivity::class.java)
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        startActivity(intent)
+    }
 }
