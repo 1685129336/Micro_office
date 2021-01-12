@@ -2,16 +2,17 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
 }
-
+def a = rootProject.ext.androidVersion
+def d = rootProject.ext.dependenciesVersion
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion a.compileSdkVersion
+    buildToolsVersion a.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion a.minSdkVersion
+        targetSdkVersion a.targetSdkVersion
+        versionCode a.versionCode
+        versionName a.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"

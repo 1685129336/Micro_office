@@ -2,18 +2,16 @@ package com.bawei.usercenter.fragment
 
 import android.os.Bundle
 import android.text.Editable
-import android.util.Log
-import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
 import com.bawei.usercenter.BR
 import com.bawei.usercenter.R
 import com.bawei.usercenter.UserCenterActivity
 import com.bawei.usercenter.databinding.FragmentPasswordBinding
-import com.bawei.usercenter.fragment.api.FragmentPassByValue
 import com.bawei.usercenter.viewmodel.UserCenterViewModel
 import com.example.common.event.api.IEvent
-import core.ui.BaseFragment
+import core.api.FragmentPassByValue
 import core.ui.BaseMVVMFragment
+import core.ui.callbackFragment
 
 class PasswordFragment : BaseMVVMFragment<UserCenterViewModel,FragmentPasswordBinding>(),FragmentPassByValue {
     override fun createViewModel(): UserCenterViewModel {
@@ -26,7 +24,7 @@ class PasswordFragment : BaseMVVMFragment<UserCenterViewModel,FragmentPasswordBi
 
     override fun initData() {
         binding.btBack.setOnClickListener {
-            (activity as UserCenterActivity).goBack()
+            callbackFragment(activity!!)
         }
     }
 

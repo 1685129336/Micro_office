@@ -6,18 +6,21 @@ if (isUserCenterDebug.toBoolean()) {
     apply plugin:"kotlin-android"
     apply plugin:"kotlin-kapt"
     apply plugin:"kotlin-android-extensions"
+
+def a = rootProject.ext.androidVersion
+def d = rootProject.ext.dependenciesVersion
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion a.compileSdkVersion
+    buildToolsVersion a.buildToolsVersion
 
     defaultConfig {
         if (isUserCenterDebug.toBoolean()) {
             applicationId "com.bawei.usercenter"
         }
-        minSdkVersion 16
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion a.minSdkVersion
+        targetSdkVersion a.targetSdkVersion
+        versionCode a.versionCode
+        versionName a.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         javaCompileOptions {
@@ -65,9 +68,9 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation('com.alibaba:arouter-api:1.4.1') //ARouter依赖
-    kapt 'com.alibaba:arouter-compiler:1.2.2' //ARouter依赖
-    def commonUtilsVersion = '1.0.2'
+    implementation("com.alibaba:arouter-api:$d.arouter") //ARouter依赖
+    kapt "com.alibaba:arouter-compiler:$d.arouter_compiler" //ARouter依赖
+    def commonUtilsVersion = d.commonUtilsVersion
     //公共的工具，图片，日志，自定义适配器
     implementation "com.github.1685129336.CommonUtils:common:$commonUtilsVersion"
     //网络
@@ -77,6 +80,6 @@ dependencies {
     //框架
     implementation "com.github.1685129336.CommonUtils:mvvmcore:$commonUtilsVersion"
     implementation 'com.android.support:multidex:1.0.3'
-
-    implementation 'me.jessyan:autosize:1.2.1'//屏幕适配
+//
+//    implementation "me.jessyan:autosize:${d.autosize}"//屏幕适配
 }

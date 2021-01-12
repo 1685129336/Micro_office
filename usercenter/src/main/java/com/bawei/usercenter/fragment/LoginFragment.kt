@@ -5,29 +5,21 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.text.Editable
-
 import android.view.View
 import android.widget.AdapterView
-
 import androidx.lifecycle.ViewModelProvider
 import com.bawei.usercenter.BR
 import com.bawei.usercenter.R
 import com.bawei.usercenter.UserCenterActivity
 import com.bawei.usercenter.databinding.FragmentLoginBinding
-
-import com.bawei.usercenter.fragment.api.FragmentPassByValue
 import com.bawei.usercenter.viewmodel.UserCenterViewModel
-
-
 import com.example.common.event.api.IEvent
-
-
-
+import core.api.FragmentPassByValue
 import core.ui.BaseMVVMFragment
-import kotlinx.android.synthetic.main.fragment_login.*
+import core.ui.startFragment
 import java.util.*
 
-class LoginFragment : BaseMVVMFragment<UserCenterViewModel,FragmentLoginBinding>(),FragmentPassByValue {
+class LoginFragment : BaseMVVMFragment<UserCenterViewModel,FragmentLoginBinding>(), FragmentPassByValue {
     var boolean:Boolean = false
     var sp:Int = 0
 
@@ -64,7 +56,7 @@ class LoginFragment : BaseMVVMFragment<UserCenterViewModel,FragmentLoginBinding>
         binding.tvAuthCodeLogin.setOnClickListener {
             val bundle = Bundle()
             bundle.putBoolean("authCode",true)
-            ( activity as UserCenterActivity).startFragment(PhoneNumberFragment::class.java,bundle)
+           startFragment(activity!!,PhoneNumberFragment::class.java,bundle)
         }
 
         //选择语言监听

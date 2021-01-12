@@ -8,12 +8,13 @@ import com.bawei.usercenter.BR
 import com.bawei.usercenter.R
 import com.bawei.usercenter.UserCenterActivity
 import com.bawei.usercenter.databinding.FragmentAuthCodeBinding
-import com.bawei.usercenter.fragment.api.FragmentPassByValue
 import com.bawei.usercenter.viewmodel.UserCenterViewModel
+import core.api.FragmentPassByValue
 import core.ui.BaseFragment
 import core.ui.BaseMVVMFragment
+import core.ui.callbackFragment
 
-class AuthCodeFragment : BaseMVVMFragment<UserCenterViewModel,FragmentAuthCodeBinding>(),FragmentPassByValue {
+class AuthCodeFragment : BaseMVVMFragment<UserCenterViewModel,FragmentAuthCodeBinding>(), FragmentPassByValue {
     override fun createViewModel(): UserCenterViewModel {
         return ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(UserCenterViewModel::class.java)
     }
@@ -28,7 +29,7 @@ class AuthCodeFragment : BaseMVVMFragment<UserCenterViewModel,FragmentAuthCodeBi
 
     override fun initView() {
         binding.btBack.setOnClickListener {
-            (activity as UserCenterActivity).goBack()
+            callbackFragment(activity!!)
         }
 
         binding.authCode01.addEdit(binding.authCode02)

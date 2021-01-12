@@ -2,6 +2,7 @@ package com.bawei.usercenter.viewmodel
 
 import android.util.Log
 import com.bawei.usercenter.model.UserCenterModel
+import com.example.observ.customObserver
 import core.BaseViewModel
 import java.util.regex.Pattern
 
@@ -12,7 +13,7 @@ class UserCenterViewModel : BaseViewModel<String,String,UserCenterModel>() {
 
 
     fun regexPhone(inputData:String,success:()->Unit,error:(msg:String)->Unit){
-        val matches = Pattern.matches("(13|14|15|18|17)[0-9]{9}", inputData)
+        val matches = Pattern.matches("(13|14|15|18|17|16)[0-9]{9}", inputData)
 
         if(matches){
             success()
@@ -30,6 +31,17 @@ class UserCenterViewModel : BaseViewModel<String,String,UserCenterModel>() {
         }else{
             error("密码必须为6-10以内")
         }
+    }
+
+    fun register(phoneNum:String,pwd:String){
+        mModel.register(phoneNum, pwd).customObserver({
+
+        },{
+
+        })
+    }
+    fun login(){
+
     }
 
 

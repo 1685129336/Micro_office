@@ -1,17 +1,18 @@
 package com.bawei.usercenter.fragment
 
 import android.os.Bundle
-import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
 import com.bawei.usercenter.BR
 import com.bawei.usercenter.R
 import com.bawei.usercenter.UserCenterActivity
 import com.bawei.usercenter.databinding.FragmentUserNameBinding
-import com.bawei.usercenter.fragment.api.FragmentPassByValue
 import com.bawei.usercenter.viewmodel.UserCenterViewModel
+import core.api.FragmentPassByValue
 import core.ui.BaseMVVMFragment
+import core.ui.callbackFragment
+import core.ui.startFragment
 
-class UserNameFragment : BaseMVVMFragment<UserCenterViewModel,FragmentUserNameBinding>(),FragmentPassByValue {
+class UserNameFragment : BaseMVVMFragment<UserCenterViewModel,FragmentUserNameBinding>(), FragmentPassByValue {
     override fun createViewModel(): UserCenterViewModel {
         return ViewModelProvider(this,ViewModelProvider.NewInstanceFactory()).get(UserCenterViewModel::class.java)
     }
@@ -22,14 +23,13 @@ class UserNameFragment : BaseMVVMFragment<UserCenterViewModel,FragmentUserNameBi
 
     override fun initData() {
         binding.btBack.setOnClickListener {
-            (activity as UserCenterActivity).goBack()
+            callbackFragment(activity!!)
         }
     }
 
     override fun initView() {
         binding.btUserNameNext.setOnClickListener {
-            val userCenterActivity = activity as UserCenterActivity
-            userCenterActivity.startFragment(PasswordFragment::class.java,Bundle())
+            startFragment(activity!!,PasswordFragment::class.java,Bundle())
         }
     }
 
