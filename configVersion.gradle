@@ -8,7 +8,7 @@ ext{
             versionName:"1.0"
     ]
     dependenciesVersion=[
-            commonUtilsVersion:"1.0.3",
+            commonUtilsVersion:"1.0.4",
             arouter:"1.4.1",
             arouter_compiler:"1.2.2",
             autosize:"1.2.1"
