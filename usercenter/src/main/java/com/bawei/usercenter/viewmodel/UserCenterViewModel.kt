@@ -2,11 +2,12 @@ package com.bawei.usercenter.viewmodel
 
 import android.util.Log
 import com.bawei.usercenter.model.UserCenterModel
+import com.bawei.usercenter.model.bean.UserCenterEntity
 import com.example.observ.customObserver
 import core.BaseViewModel
 import java.util.regex.Pattern
 
-class UserCenterViewModel : BaseViewModel<String,String,UserCenterModel>() {
+class UserCenterViewModel : BaseViewModel<UserCenterEntity,String,UserCenterModel>() {
     override fun createModel(): UserCenterModel {
         return UserCenterModel()
     }
@@ -35,13 +36,17 @@ class UserCenterViewModel : BaseViewModel<String,String,UserCenterModel>() {
 
     fun register(phoneNum:String,pwd:String){
         mModel.register(phoneNum, pwd).customObserver({
-
+            _netSuccess.value = UserCenterEntity()
         },{
-
+            _netFailure.value = "注册失败，此用户可能已经注册"
         })
     }
-    fun login(){
-
+    fun login(phoneNum:String,pwd:String){
+        mModel.login(phoneNum, pwd).customObserver({
+            _netSuccess.value = it.data
+        },{
+            _netFailure.value = "登录失败，用户名或密码错误"
+        })
     }
 
 

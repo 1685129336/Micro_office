@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.PopupWindow
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.alibaba.android.arouter.launcher.ARouter
+import com.bawei.resource.arouter.ActivitySwitch
 import com.example.home.BR
 import com.example.home.HomeInformationActivity
 import com.example.home.R
@@ -29,50 +31,23 @@ open class HomeFragment: BaseMVVMFragment<HomeViewModel, FragmentHomeBinding>(),
     override fun initData() {
         //接口实例化
         HomeInformationActivity.setCall(this)
+    }
+
+    override fun initView() {
+        menuView = layoutInflater.inflate(R.layout.layout_menu, null)
+        popupWindow = PopupWindow(menuView,
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT,false)
+        popupWindow.isOutsideTouchable=true
+
+        val homemenu_sao = menuView.findViewById<View>(R.id.homemenu_sao)
+        val homemenu_createflock = menuView.findViewById<View>(R.id.homemenu_createflock)
+        val homemenu_createdocument = menuView.findViewById<View>(R.id.homemenu_createdocument)
+        val homemenu_invite = menuView.findViewById<View>(R.id.homemenu_invite)
+        val homemenu_joinmeeting = menuView.findViewById<View>(R.id.homemenu_joinmeeting)
 
         home_img_somesetting.setOnClickListener {
-            popupWindow = PopupWindow(menuView,
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT,false)
-            popupWindow.isOutsideTouchable=true
             popupWindow.showAsDropDown(home_img_somesetting)
-            home_view.visibility= View.VISIBLE
-
-            val homemenu_sao = menuView.findViewById<View>(R.id.homemenu_sao)
-            val homemenu_createflock = menuView.findViewById<View>(R.id.homemenu_createflock)
-            val homemenu_createdocument = menuView.findViewById<View>(R.id.homemenu_createdocument)
-            val homemenu_invite = menuView.findViewById<View>(R.id.homemenu_invite)
-            val homemenu_joinmeeting = menuView.findViewById<View>(R.id.homemenu_joinmeeting)
-
-            homemenu_sao.setOnClickListener {
-                toast("homemenu_sao")
-                startActivity(Intent(context,HomeInformationActivity::class.java))
-                popupWindow.dismiss()
-            }
-            homemenu_createflock.setOnClickListener {
-                toast("homemenu_createflock")
-                popupWindow.dismiss()
-            }
-            homemenu_createdocument.setOnClickListener {
-                toast("homemenu_createdocument")
-                popupWindow.dismiss()
-            }
-
-            homemenu_invite.setOnClickListener {
-                toast("homemenu_invite")
-                popupWindow.dismiss()
-            }
-            homemenu_joinmeeting.setOnClickListener {
-                toast("homemenu_joinmeeting")
-                popupWindow.dismiss()
-            }
-
-            popupWindow.setOnDismissListener {
-                home_view.visibility= View.GONE
-            }
-
-
-
         }
 
         infoItemadapter= InfoItemAdapter(R.layout.layout_infoitem,infoCollectlist)
@@ -83,11 +58,10 @@ open class HomeFragment: BaseMVVMFragment<HomeViewModel, FragmentHomeBinding>(),
             startActivity(Intent(context,HomeInformationActivity::class.java))
         }
 
-
-    }
-
-    override fun initView() {
-        menuView = layoutInflater.inflate(R.layout.layout_menu, null)
+        binding.ivHeader.setOnClickListener {
+            //跳转到user_center页面
+            ARouter.getInstance().build(ActivitySwitch.UserCenter.USER_CENTER_ACT).navigation()
+        }
 
     }
 
@@ -104,12 +78,6 @@ open class HomeFragment: BaseMVVMFragment<HomeViewModel, FragmentHomeBinding>(),
     }
 
     override fun send(data: Bundle?) {
-        //这里拿到主界面的一些信息
-
-        //对home_tv_name赋值
-
-        home_tv_name.setText("张")
-
     }
 
     override fun getActivityInfo(bundle: Bundle?) {

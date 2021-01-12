@@ -29,16 +29,18 @@ class UserNameFragment : BaseMVVMFragment<UserCenterViewModel,FragmentUserNameBi
 
     override fun initView() {
         binding.btUserNameNext.setOnClickListener {
-            startFragment(activity!!,PasswordFragment::class.java,Bundle())
+            startFragment(activity!!,PasswordFragment::class.java,data)
         }
     }
 
     override fun layoutID(): Int {
        return R.layout.fragment_user_name
     }
-
+    var data = Bundle()
     override fun send(data: Bundle?) {
-
+        if (data != null) {
+            this.data = data
+        }
     }
 
 }
