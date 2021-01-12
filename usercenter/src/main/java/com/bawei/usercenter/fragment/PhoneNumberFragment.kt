@@ -3,21 +3,19 @@ package com.bawei.usercenter.fragment
 import android.os.Bundle
 import android.text.Editable
 import android.util.Log
-import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
 import com.bawei.usercenter.BR
 import com.bawei.usercenter.R
 import com.bawei.usercenter.UserCenterActivity
 import com.bawei.usercenter.databinding.FragmentPhoneNumberBinding
-import com.bawei.usercenter.fragment.api.FragmentPassByValue
 import com.bawei.usercenter.viewmodel.UserCenterViewModel
 import com.example.common.event.api.IEvent
-import core.ui.BaseFragment
+import core.api.FragmentPassByValue
 import core.ui.BaseMVVMFragment
-import kotlinx.android.synthetic.main.fragment_phone_number.*
+import core.ui.callbackFragment
+import core.ui.startFragment
 
-class PhoneNumberFragment : BaseMVVMFragment<UserCenterViewModel, FragmentPhoneNumberBinding>(),
-    FragmentPassByValue {
+class PhoneNumberFragment : BaseMVVMFragment<UserCenterViewModel, FragmentPhoneNumberBinding>(), FragmentPassByValue {
     lateinit var data: Bundle
     override fun createViewModel(): UserCenterViewModel {
         return ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(
@@ -38,15 +36,14 @@ class PhoneNumberFragment : BaseMVVMFragment<UserCenterViewModel, FragmentPhoneN
         binding.btPhoneNumberNext.setOnClickListener {
                 val boolean = data.getBoolean("authCode")
                 //跳转fragment
-                val a = activity as UserCenterActivity
                 if (boolean) {
-                    a.startFragment(AuthCodeFragment::class.java, Bundle())
+                    startFragment(activity!!,AuthCodeFragment::class.java, Bundle())
                 } else {
-                    a.startFragment(UserNameFragment::class.java, Bundle())
+                    startFragment(activity!!,UserNameFragment::class.java, Bundle())
                 }
         }
         binding.btBack.setOnClickListener {
-            (activity as UserCenterActivity).goBack()
+            callbackFragment(activity!!)
         }
 
         binding.phoneTextChange = object : IEvent.OnTextChangedListener() {
