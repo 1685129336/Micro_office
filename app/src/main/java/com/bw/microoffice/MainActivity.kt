@@ -1,40 +1,48 @@
 package com.bw.microoffice
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
+import com.example.home.fragment.HomeFragment
+//import com.example.home.fragment.HomeFragment
+//import com.example.home.fragment.ZijiFragg
+//import com.example.home.fragment.HomeFragment
+//import com.example.home.fragment.ZijiFragg
 //import com.example.home.fragment.HomeFragment
 
 //import com.example.home.fragment.HomeFragment
-import com.flyco.tablayout.listener.CustomTabEntity
-import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
+import core.ui.BaseActivityPageChangeFragment
 
-class MainActivity : AppCompatActivity() {
-    private var maincusList = ArrayList<CustomTabEntity>()
-    private var mainfragmentList = ArrayList<Fragment>()
-//    lateinit var  homeFragment:HomeFragment
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-//        homeFragment = HomeFragment()
+class MainActivity : BaseActivityPageChangeFragment() {
+    override fun frameLayoutId(): Int {
+        return R.id.main_fram
+    }
+
+    override fun initData() {
+        nextPageInAnimation = R.anim.main_left_in
+        nextPageOutAnimation = R.anim.main_right_in
+        lastPageInAnimation = R.anim.main_left_out
+        lastPageOutAnimation = R.anim.main_right_out
+        val registerFragment = registerFragment(HomeFragment())
+//        val zijiFragg = registerFragment(ZijiFragg())
+
+//        startFragment(HomeFragment::class.java,Bundle())
+        pageChange(registerFragment)
+//        pageChange(zijiFragg)
 
 
-//        mainfragmentList.add(homeFragment)
-//        mainfragmentList.add(homeFragment)
-//        mainfragmentList.add(homeFragment)
-//        mainfragmentList.add(homeFragment)
-//        mainfragmentList.add(homeFragment)
-
-//        maincusList.add(MainCuBean("消息", 0, 0))
-//        maincusList.add(MainCuBean("日历", 0, 0))
-//        maincusList.add(MainCuBean("工作台", 0, 0))
-//        maincusList.add(MainCuBean("云空间", 0, 0))
-//        maincusList.add(MainCuBean("联系人", 0, 0))
-
-//        main_commtab.setTabData(maincusList, this, R.id.main_fram, mainfragmentList)
+//        registerFragment()
+//        registerFragment()
+//        registerFragment()
+//        registerFragment()
 
     }
 
+    override fun initView() {
+    }
+
+    override fun layoutID(): Int {
+        return R.layout.activity_main
+    }
+    fun pageChange(pos:Int){
+        pageChange(pos,fragments,true,nextPageInAnimation,nextPageOutAnimation,lastPageInAnimation,lastPageOutAnimation)
+    }
 
 }

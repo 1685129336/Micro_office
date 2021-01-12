@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/bottom_01" android:title="消息" android:icon="@drawable/ic_msg"/>
+    <item android:id="@+id/bottom_02" android:title="日历" android:icon="@drawable/ic_calendar"/>
+    <item android:id="@+id/bottom_03" android:title="工作台" android:icon="@drawable/ic_word"/>
+    <item android:id="@+id/bottom_04" android:title="云空间" android:icon="@drawable/ic_cloud"/>
+    <item android:id="@+id/bottom_05" android:title="联系人" android:icon="@drawable/ic_contacts"/>
+</menu>

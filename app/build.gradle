@@ -31,6 +31,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    dataBinding{
+        enabled = true
+    }
 }
 
 dependencies {
@@ -39,6 +42,7 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.android.material:material:1.2.1'
     if (!isUserCenterDebug.toBoolean()) {
         implementation project(path: ':usercenter')
     }
@@ -49,18 +53,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation project(path: ':resource')
-    def commonUtilsVersion = '0.0.9'
+    def commonUtilsVersion = '1.0.2'
     //公共的工具，图片，日志，自定义适配器
     implementation "com.github.1685129336.CommonUtils:common:$commonUtilsVersion"
-    //网络
-    implementation "com.github.1685129336.CommonUtils:net:$commonUtilsVersion"
-    //多媒体，音视频，压缩
-    implementation "com.github.1685129336.CommonUtils:media:$commonUtilsVersion"
-    //框架
     implementation "com.github.1685129336.CommonUtils:mvvmcore:$commonUtilsVersion"
-    //xmpp IM 即时通讯
-    implementation "com.github.1685129336.CommonUtils:XmppLibrary:$commonUtilsVersion"
-    implementation "com.github.1685129336.CommonUtils:CommonLibrary:$commonUtilsVersion"
 
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.2@aar'//flycotablayout
