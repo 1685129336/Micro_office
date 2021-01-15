@@ -8,7 +8,8 @@ import android.view.ViewGroup
 import android.widget.PopupWindow
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bawei.team.TeamActivity
+import com.alibaba.android.arouter.launcher.ARouter
+import com.bawei.resource.arouter.ActivitySwitch
 import com.example.home.BR
 import com.example.home.HomeInformationActivity
 import com.example.home.R
@@ -30,19 +31,10 @@ open class HomeFragment: BaseMVVMFragment<HomeViewModel, FragmentHomeBinding>(),
     override fun initData() {
         //接口实例化
         HomeInformationActivity.setCall(this)
-
-
-
-        infoItemadapter= InfoItemAdapter(R.layout.layout_infoitem,infoCollectlist)
-        binding.homeRecycler.adapter=infoItemadapter
-        home_recycler.layoutManager=LinearLayoutManager(context)
-
-        infoItemadapter.setOnItemClickListener { adapter, view, position ->
-            startActivity(Intent(context,HomeInformationActivity::class.java))
-        }
-
-
     }
+
+
+
 
     override fun initView() {
         menuView = layoutInflater.inflate(R.layout.layout_menu, null)
@@ -51,9 +43,9 @@ open class HomeFragment: BaseMVVMFragment<HomeViewModel, FragmentHomeBinding>(),
             ViewGroup.LayoutParams.WRAP_CONTENT,
             ViewGroup.LayoutParams.WRAP_CONTENT,false)
         popupWindow.isOutsideTouchable=true
+
         home_img_somesetting.setOnClickListener {
             popupWindow.showAsDropDown(home_img_somesetting)
-            home_view.visibility= View.VISIBLE
 
             val homemenu_sao = menuView.findViewById<View>(R.id.homemenu_sao)
             val homemenu_createflock = menuView.findViewById<View>(R.id.homemenu_createflock)
@@ -63,7 +55,7 @@ open class HomeFragment: BaseMVVMFragment<HomeViewModel, FragmentHomeBinding>(),
 
             homemenu_sao.setOnClickListener {
                 toast("homemenu_sao")
-                startActivity(Intent(context,HomeInformationActivity::class.java))
+                startActivity(Intent(context, HomeInformationActivity::class.java))
                 popupWindow.dismiss()
             }
             homemenu_createflock.setOnClickListener {
@@ -79,9 +71,6 @@ open class HomeFragment: BaseMVVMFragment<HomeViewModel, FragmentHomeBinding>(),
 
             homemenu_invite.setOnClickListener {
                 toast("homemenu_invite")
-                val teamActivity = Intent(context, TeamActivity::class.java)
-                teamActivity.putExtra("count",1)
-                startActivity(teamActivity)
                 popupWindow.dismiss()
             }
             homemenu_joinmeeting.setOnClickListener {
@@ -91,12 +80,24 @@ open class HomeFragment: BaseMVVMFragment<HomeViewModel, FragmentHomeBinding>(),
             }
 
             popupWindow.setOnDismissListener {
-                home_view.visibility= View.GONE
+
             }
 
-
-
         }
+
+        infoItemadapter= InfoItemAdapter(R.layout.layout_infoitem,infoCollectlist)
+        home_recycler.adapter=infoItemadapter
+        home_recycler.layoutManager=LinearLayoutManager(context)
+
+        infoItemadapter.setOnItemClickListener { adapter, view, position ->
+            startActivity(Intent(context,HomeInformationActivity::class.java))
+        }
+
+        binding.ivHeader.setOnClickListener {
+            //跳转到user_center页面
+            ARouter.getInstance().build(ActivitySwitch.UserCenter.USER_CENTER_ACT).navigation()
+        }
+
 
     }
 

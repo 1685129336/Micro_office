@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin:"kotlin-kapt"
 def a = rootProject.ext.androidVersion
 def d = rootProject.ext.dependenciesVersion
 android {
@@ -17,6 +17,11 @@ android {
 
         multiDexEnabled true//解除方法65535限制
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
 
     buildTypes {
@@ -57,7 +62,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation project(path: ':resource')
-
+    implementation("com.alibaba:arouter-api:$d.arouter") //ARouter依赖
+    kapt "com.alibaba:arouter-compiler:$d.arouter_compiler" //ARouter依赖
     def commonUtilsVersion = d.commonUtilsVersion
     //公共的工具，图片，日志，自定义适配器
     implementation "com.github.1685129336.CommonUtils:common:$commonUtilsVersion"

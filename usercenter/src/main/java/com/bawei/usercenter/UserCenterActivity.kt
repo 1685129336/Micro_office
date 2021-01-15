@@ -1,15 +1,18 @@
 package com.bawei.usercenter
 
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
+import com.bawei.resource.arouter.ActivitySwitch
 import com.bawei.usercenter.fragment.*
 import core.ui.BaseActivityPageChangeFragment
-
+@Route(path = ActivitySwitch.UserCenter.USER_CENTER_ACT)
 class UserCenterActivity : BaseActivityPageChangeFragment() {
     override fun frameLayoutId(): Int {
         return R.id.frame_layout
     }
 
     override fun initData() {
-
+        ARouter.getInstance().inject(this)
         nextPageInAnimation =R.anim.slide_right_in
         nextPageOutAnimation =  R.anim.slide_left_out
         lastPageInAnimation = R.anim.slide_right_out

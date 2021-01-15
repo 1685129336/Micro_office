@@ -34,12 +34,15 @@ class PhoneNumberFragment : BaseMVVMFragment<UserCenterViewModel, FragmentPhoneN
     override fun initView() {
         binding.btPhoneNumberNext.isEnabled = false
         binding.btPhoneNumberNext.setOnClickListener {
-                val boolean = data.getBoolean("authCode")
-                //跳转fragment
+            val phoneNum = binding.phoneEt.text.toString()
+            val boolean = data.getBoolean("authCode")
+            val bundle = Bundle()
+            bundle.putString("phoneNum",phoneNum)
+            //跳转fragment
                 if (boolean) {
-                    startFragment(activity!!,AuthCodeFragment::class.java, Bundle())
+                    startFragment(activity!!,AuthCodeFragment::class.java, bundle)
                 } else {
-                    startFragment(activity!!,UserNameFragment::class.java, Bundle())
+                    startFragment(activity!!,UserNameFragment::class.java, bundle)
                 }
         }
         binding.btBack.setOnClickListener {
@@ -59,6 +62,7 @@ class PhoneNumberFragment : BaseMVVMFragment<UserCenterViewModel, FragmentPhoneN
                 })
             }
         }
+
     }
 
     override fun layoutID(): Int {

@@ -52,7 +52,6 @@
            android:layout_marginLeft="20dp"
            android:layout_marginRight="20dp"
            android:id="@+id/username_layout"
-           app:errorTextColor="#D82929"
            android:layout_marginTop="40dp"
            >
            <EditText
@@ -61,7 +60,6 @@
                android:layout_height="wrap_content"
                android:hint="@string/login_username"
                my_onTextChange="@{userNameTextChange}"
-               android:inputType="textPassword"
                />
        </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout

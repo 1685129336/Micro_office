@@ -2,6 +2,7 @@ package com.bawei.usercenter.fragment
 
 import android.os.Bundle
 import android.text.Editable
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.bawei.usercenter.BR
 import com.bawei.usercenter.R
@@ -64,14 +65,34 @@ class PasswordFragment : BaseMVVMFragment<UserCenterViewModel,FragmentPasswordBi
                 })
             }
         }
+
+        binding.btRegister.setOnClickListener {
+            val pwd1 = binding.pwdEt01.text.toString()
+            val pwd2 = binding.pwdEt02.text.toString()
+            val phoneNum = data.getString("phoneNum")
+            if(!phoneNum.isNullOrBlank() && pwd1==pwd2){
+                viewModel.register(phoneNum!!,pwd1)
+            }else{
+                toast("注册失败")
+            }
+        }
+
+        viewModel.netSuccess.observe(this, Observer {
+            toast("注册成功")
+        })
+        viewModel.netFailure.observe(this, Observer {
+            toast(it)
+        })
     }
 
     override fun layoutID(): Int {
        return R.layout.fragment_password
     }
-
+    var data = Bundle()
     override fun send(data: Bundle?) {
-
+        if (data != null) {
+            this.data = data
+        }
     }
 
 
