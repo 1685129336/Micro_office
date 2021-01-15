@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.bawei.team.viewmodel.AddMemberViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/addmembertext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="添加团队成员"
+            android:textColor="#000"
+            android:textSize="@dimen/dp_30" />
+
+        <ImageView
+            android:id="@+id/addmemberimg"
+            android:layout_below="@+id/addmembertext"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@mipmap/join_team"
+            android:layout_marginTop="@dimen/dp_50"
+            />
+
+        <TextView
+            android:layout_below="@+id/addmemberimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="快把“Team1”的小伙拌召集到微办公吧！"
+            android:textColor="#000"
+            android:textSize="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_20"/>
+        <Button
+            android:id="@+id/addmemberbtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@drawable/team_teambtn_back"
+            android:text="添加成员"
+            android:textColor="#fff"
+            android:textSize="@dimen/dp_30"
+            android:layout_above="@+id/lazyadd"
+            android:layout_marginBottom="@dimen/dp_10"/>
+        <TextView
+            android:id="@+id/lazyadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="稍后添加"
+            android:textColor="#000"
+            android:textSize="@dimen/dp_15"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dp_50"
+            />
+
+    </RelativeLayout>
+</layout>

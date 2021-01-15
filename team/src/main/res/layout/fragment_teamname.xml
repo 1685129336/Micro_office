@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.bawei.team.viewmodel.TeamNameViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/name_return"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_chevron_left_24" />
+
+        <LinearLayout
+            android:id="@+id/name_text_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_return"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="填写团队名称"
+                android:textColor="#000"
+                android:textSize="@dimen/dp_30" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="团队可以使公司，也可以是项目组或者其他协作组织。\n请务必填写真是名称，方便大家快速找到团队"
+                android:textColor="#9A9999"
+                android:textSize="@dimen/dp_15" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/input_teamname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_below="@+id/name_text_ll"
+            android:layout_marginTop="@dimen/dp_40"
+            android:background="@drawable/team_et_back"
+            android:hint="输入团队码"
+            android:paddingLeft="@dimen/dp_10"
+            android:textSize="@dimen/dp_20"/>
+
+
+        <Button
+            android:id="@+id/team_namebtn_next"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_70"
+            android:background="@drawable/team_btn_back"
+            android:text="下一步"
+            android:textColor="#fff"
+            android:textSize="@dimen/dp_30" />
+
+    </RelativeLayout>
+</layout>

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.PopupWindow
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bawei.team.TeamActivity
 import com.example.home.BR
 import com.example.home.HomeInformationActivity
 import com.example.home.R
@@ -30,11 +31,27 @@ open class HomeFragment: BaseMVVMFragment<HomeViewModel, FragmentHomeBinding>(),
         //接口实例化
         HomeInformationActivity.setCall(this)
 
+
+
+        infoItemadapter= InfoItemAdapter(R.layout.layout_infoitem,infoCollectlist)
+        binding.homeRecycler.adapter=infoItemadapter
+        home_recycler.layoutManager=LinearLayoutManager(context)
+
+        infoItemadapter.setOnItemClickListener { adapter, view, position ->
+            startActivity(Intent(context,HomeInformationActivity::class.java))
+        }
+
+
+    }
+
+    override fun initView() {
+        menuView = layoutInflater.inflate(R.layout.layout_menu, null)
+
+        popupWindow = PopupWindow(menuView,
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT,false)
+        popupWindow.isOutsideTouchable=true
         home_img_somesetting.setOnClickListener {
-            popupWindow = PopupWindow(menuView,
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT,false)
-            popupWindow.isOutsideTouchable=true
             popupWindow.showAsDropDown(home_img_somesetting)
             home_view.visibility= View.VISIBLE
 
@@ -51,19 +68,25 @@ open class HomeFragment: BaseMVVMFragment<HomeViewModel, FragmentHomeBinding>(),
             }
             homemenu_createflock.setOnClickListener {
                 toast("homemenu_createflock")
+
                 popupWindow.dismiss()
             }
             homemenu_createdocument.setOnClickListener {
                 toast("homemenu_createdocument")
+
                 popupWindow.dismiss()
             }
 
             homemenu_invite.setOnClickListener {
                 toast("homemenu_invite")
+                val teamActivity = Intent(context, TeamActivity::class.java)
+                teamActivity.putExtra("count",1)
+                startActivity(teamActivity)
                 popupWindow.dismiss()
             }
             homemenu_joinmeeting.setOnClickListener {
                 toast("homemenu_joinmeeting")
+
                 popupWindow.dismiss()
             }
 
@@ -74,20 +97,6 @@ open class HomeFragment: BaseMVVMFragment<HomeViewModel, FragmentHomeBinding>(),
 
 
         }
-
-        infoItemadapter= InfoItemAdapter(R.layout.layout_infoitem,infoCollectlist)
-        home_recycler.adapter=infoItemadapter
-        home_recycler.layoutManager=LinearLayoutManager(context)
-
-        infoItemadapter.setOnItemClickListener { adapter, view, position ->
-            startActivity(Intent(context,HomeInformationActivity::class.java))
-        }
-
-
-    }
-
-    override fun initView() {
-        menuView = layoutInflater.inflate(R.layout.layout_menu, null)
 
     }
 
@@ -104,11 +113,6 @@ open class HomeFragment: BaseMVVMFragment<HomeViewModel, FragmentHomeBinding>(),
     }
 
     override fun send(data: Bundle?) {
-        //这里拿到主界面的一些信息
-
-        //对home_tv_name赋值
-
-        home_tv_name.setText("张")
 
     }
 

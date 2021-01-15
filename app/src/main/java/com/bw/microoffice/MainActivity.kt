@@ -1,5 +1,6 @@
 package com.bw.microoffice
 
+import android.os.Bundle
 import com.example.home.fragment.HomeFragment
 //import com.example.home.fragment.HomeFragment
 //import com.example.home.fragment.ZijiFragg
@@ -23,8 +24,8 @@ class MainActivity : BaseActivityPageChangeFragment() {
         val registerFragment = registerFragment(HomeFragment())
 //        val zijiFragg = registerFragment(ZijiFragg())
 
-//        startFragment(HomeFragment::class.java,Bundle())
-        pageChange(registerFragment)
+        startFragment(HomeFragment::class.java, Bundle())
+//        pageChange(registerFragment)
 //        pageChange(zijiFragg)
 
 

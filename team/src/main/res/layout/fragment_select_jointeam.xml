@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.bawei.team.viewmodel.SelectJoinTeamViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/selectjoin_return"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_chevron_left_24" />
+
+        <LinearLayout
+            android:id="@+id/selectjoin_text_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selectjoin_return"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择加入方式"
+                android:textColor="#000"
+                android:textSize="@dimen/dp_30" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请向你的团队管理员咨询团队码或者二维码"
+                android:textColor="#9A9999"
+                android:textSize="@dimen/dp_15" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/selectjoin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selectjoin_text_ll"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_15">
+
+            <RelativeLayout
+                android:id="@+id/inputteamcode"
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="@dimen/dp_70"
+                android:background="@drawable/team_select_back">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="ID"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/dp_30" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_50"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_toRightOf="@+id/inputteamcode"
+                android:text="输入团队码"
+                android:textColor="#666666"
+                android:textSize="@dimen/dp_20" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/inputteamcode"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="#666666" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_chevron_right_24" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sao_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selectjoin"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_15">
+
+            <RelativeLayout
+                android:id="@+id/zxing"
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="@dimen/dp_70"
+                android:background="@drawable/team_selectsao_back">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="ID"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/dp_30" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_50"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_toRightOf="@+id/zxing"
+                android:text="扫描二维码"
+                android:textColor="#666666"
+                android:textSize="@dimen/dp_20" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/zxing"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="#666666" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_chevron_right_24" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

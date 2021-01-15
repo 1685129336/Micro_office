@@ -1,3 +1,4 @@
+include ':team'
 include ':linkman'
 include ':home'
 include ':usercenter'
