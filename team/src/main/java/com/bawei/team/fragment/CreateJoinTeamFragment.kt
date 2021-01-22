@@ -1,6 +1,8 @@
 package com.bawei.team.fragment
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Message
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.bawei.team.BR
@@ -35,6 +37,12 @@ class CreateJoinTeamFragment :BaseMVVMFragment<CreateJoinTeamViewModel, Fragment
             startFragment(activity!!,TeamNameFragment::class.java, Bundle())
         }
 
+        val arguments = arguments
+
+        val int = arguments!!.getInt("skip")
+        if (int==1){
+            startFragment(activity!!,AddMemberFragment::class.java, Bundle())
+        }
     }
 
     override fun layoutID(): Int {
