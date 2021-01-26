@@ -3,18 +3,20 @@ package com.bw.microoffice
 
 
 import android.os.Bundle
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
 import com.bawei.resource.arouter.ActivitySwitch
 
 import com.example.home.fragment.HomeFragment
 import core.ui.BaseActivityPageChangeFragment
-//@Route(path = ActivitySwitch.APP.MAIN_ACT)
+@Route(path = ActivitySwitch.APP.MAIN_ACT)
 class MainActivity : BaseActivityPageChangeFragment() {
     override fun frameLayoutId(): Int {
         return R.id.main_fram
     }
 
     override fun initData() {
-//        ARouter.getInstance().inject(this)
+        ARouter.getInstance().inject(this)
 
         //设置fragment进入场动画
         nextPageInAnimation = R.anim.main_left_in

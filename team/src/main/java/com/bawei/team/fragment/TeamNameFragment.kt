@@ -11,6 +11,7 @@ import com.bawei.team.viewmodel.TeamCodeViewModel
 import com.bawei.team.viewmodel.TeamNameViewModel
 import core.api.FragmentPassByValue
 import core.ui.BaseMVVMFragment
+import core.ui.callbackFragment
 import core.ui.startFragment
 import kotlinx.android.synthetic.main.fragment_teamname.*
 
@@ -50,6 +51,9 @@ class TeamNameFragment : BaseMVVMFragment<TeamNameViewModel, FragmentTeamnameBin
             toast("${it}")
         })
 
+        binding.nameReturn.setOnClickListener {
+            callbackFragment(activity!!)
+        }
     }
 
     override fun layoutID(): Int {

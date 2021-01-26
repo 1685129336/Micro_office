@@ -10,4 +10,7 @@ public class ActivitySwitch {
     public static class Home{
         public static final String HOME_ACT = "/home/HomeInformationActivity";
     }
+    public static class Team{
+        public static final String TEAM_ACT="/team/TeamActivity";
+    }
 }
