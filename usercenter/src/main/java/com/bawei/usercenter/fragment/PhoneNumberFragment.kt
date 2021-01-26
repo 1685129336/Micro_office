@@ -45,10 +45,9 @@ class PhoneNumberFragment : BaseMVVMFragment<UserCenterViewModel, FragmentPhoneN
                     startFragment(activity!!,UserNameFragment::class.java, bundle)
                 }
         }
-        binding.btBack.setOnClickListener {
+        binding.phoneBaseLayout.setOnBackClickListener {
             callbackFragment(activity!!)
         }
-
         binding.phoneTextChange = object : IEvent.OnTextChangedListener() {
             override fun afterTextChanged(s: Editable?) {
                 super.afterTextChanged(s)

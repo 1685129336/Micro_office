@@ -16,6 +16,7 @@ import com.bawei.usercenter.viewmodel.UserCenterViewModel
 import com.example.common.event.api.IEvent
 import com.example.common.sp.SPUtil
 import com.example.net.RetrofitFactory
+import core.api.ErrorView
 import core.api.FragmentPassByValue
 import core.ui.BaseMVVMFragment
 import core.ui.startFragment
@@ -101,6 +102,7 @@ class LoginFragment : BaseMVVMFragment<UserCenterViewModel, FragmentLoginBinding
             val username = binding.usernameEt.text.toString()
             val pwd = binding.passwordEt.text.toString()
             viewModel.login(username, pwd)
+            binding.loginBaseLayout.pageLoadingState()
         }
 
     }
@@ -115,9 +117,11 @@ class LoginFragment : BaseMVVMFragment<UserCenterViewModel, FragmentLoginBinding
             token.inputPreference(it.token)
             RetrofitFactory.setToken(token.findPreference())
             isLogin.inputPreference(true)
+            binding.loginBaseLayout.pageNormalState()
         })
         viewModel.netFailure.observe(this, androidx.lifecycle.Observer {
             toast(it)
+            binding.loginBaseLayout.pageNormalState()
         })
     }
 

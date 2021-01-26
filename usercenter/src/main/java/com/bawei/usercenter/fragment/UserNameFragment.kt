@@ -22,7 +22,7 @@ class UserNameFragment : BaseMVVMFragment<UserCenterViewModel,FragmentUserNameBi
     }
 
     override fun initData() {
-        binding.btBack.setOnClickListener {
+        binding.usernameBaseLayout.setOnBackClickListener {
             callbackFragment(activity!!)
         }
     }
