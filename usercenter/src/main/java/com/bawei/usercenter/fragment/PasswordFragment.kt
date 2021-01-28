@@ -6,13 +6,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.bawei.usercenter.BR
 import com.bawei.usercenter.R
-import com.bawei.usercenter.UserCenterActivity
 import com.bawei.usercenter.databinding.FragmentPasswordBinding
 import com.bawei.usercenter.viewmodel.UserCenterViewModel
 import com.example.common.event.api.IEvent
 import core.api.FragmentPassByValue
 import core.ui.BaseMVVMFragment
 import core.ui.callbackFragment
+import core.ui.startFragment
 
 class PasswordFragment : BaseMVVMFragment<UserCenterViewModel,FragmentPasswordBinding>(),FragmentPassByValue {
     override fun createViewModel(): UserCenterViewModel {
@@ -24,7 +24,7 @@ class PasswordFragment : BaseMVVMFragment<UserCenterViewModel,FragmentPasswordBi
     }
 
     override fun initData() {
-        binding.btBack.setOnClickListener {
+        binding.pwdBaseLayout.setOnBackClickListener {
             callbackFragment(activity!!)
         }
     }
@@ -72,6 +72,7 @@ class PasswordFragment : BaseMVVMFragment<UserCenterViewModel,FragmentPasswordBi
             val phoneNum = data.getString("phoneNum")
             if(!phoneNum.isNullOrBlank() && pwd1==pwd2){
                 viewModel.register(phoneNum!!,pwd1)
+                binding.pwdBaseLayout.pageLoadingState()
             }else{
                 toast("注册失败")
             }
@@ -79,9 +80,12 @@ class PasswordFragment : BaseMVVMFragment<UserCenterViewModel,FragmentPasswordBi
 
         viewModel.netSuccess.observe(this, Observer {
             toast("注册成功")
+            binding.pwdBaseLayout.pageNormalState()
+            startFragment(activity!!,LoginFragment::class.java,Bundle())
         })
         viewModel.netFailure.observe(this, Observer {
             toast(it)
+            binding.pwdBaseLayout.pageNormalState()
         })
     }
 

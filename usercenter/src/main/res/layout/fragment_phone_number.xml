@@ -10,86 +10,88 @@
             name="phoneTextChange"
             type="com.example.common.event.api.IEvent.OnTextChangedListener" />
     </data>
-    <LinearLayout
+    <core.ui.BaseLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:id="@+id/phone_base_layout"
         >
-        <Button
-            android:id="@+id/bt_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/back"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="35dp"
-            android:text="@string/phone_title"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="20dp"
-
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="@string/phone_msg"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            />
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            app:errorTextColor="#D82929"
-            android:layout_marginTop="60dp"
-            android:id="@+id/phone_input_layout"
-            >
-            <EditText
-                android:id="@+id/phone_et"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/phone_username"
-                my_onTextChange="@{phoneTextChange}"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:tag="user"
             >
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:text="@string/phone_button"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:textSize="20sp"
-                android:background="#4AA6EF"
-                android:textColor="#fff"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="50dp"
-                android:id="@+id/bt_phone_number_next"
-                />
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:textSize="35dp"
+                android:text="@string/phone_title"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="20dp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/phone_msg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_alignParentBottom="true"
+                app:errorTextColor="#D82929"
+                android:layout_marginTop="60dp"
+                android:id="@+id/phone_input_layout"
                 >
-                <CheckBox
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/phone_et"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/phone_i_read"
-                    android:textSize="10sp"
+                    android:hint="@string/phone_username"
+                    my_onTextChange="@{phoneTextChange}"
                     />
-<!--                auth code-->
-            </LinearLayout>
-        </RelativeLayout>
-    </LinearLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/phone_button"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="20sp"
+                    android:background="#4AA6EF"
+                    android:textColor="#fff"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="50dp"
+                    android:id="@+id/bt_phone_number_next"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentBottom="true"
+                    >
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/phone_i_read"
+                        android:textSize="10sp"
+                        />
+                    <!--                auth code-->
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </core.ui.BaseLayout>
+
 </layout>
 
 

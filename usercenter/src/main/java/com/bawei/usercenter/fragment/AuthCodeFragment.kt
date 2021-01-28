@@ -28,7 +28,7 @@ class AuthCodeFragment : BaseMVVMFragment<UserCenterViewModel,FragmentAuthCodeBi
     }
 
     override fun initView() {
-        binding.btBack.setOnClickListener {
+        binding.authCodeBaseLayout.setOnBackClickListener {
             callbackFragment(activity!!)
         }
 
@@ -54,8 +54,5 @@ class AuthCodeFragment : BaseMVVMFragment<UserCenterViewModel,FragmentAuthCodeBi
             this.data = data
         }
         Log.i("====", "消息")
-    }
-    override fun onResume() {
-        super.onResume()
     }
 }
