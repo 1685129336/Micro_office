@@ -37,12 +37,6 @@ class CreateJoinTeamFragment :BaseMVVMFragment<CreateJoinTeamViewModel, Fragment
             startFragment(activity!!,TeamNameFragment::class.java, Bundle())
         }
 
-        val arguments = arguments
-
-        val int = arguments!!.getInt("skip")
-        if (int==1){
-            startFragment(activity!!,AddMemberFragment::class.java, Bundle())
-        }
     }
 
     override fun layoutID(): Int {

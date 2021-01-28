@@ -8,11 +8,13 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.bawei.resource.arouter.ActivitySwitch
 import com.bawei.team.fragment.*
+import com.example.common.sp.SPUtil
 import com.example.net.RetrofitFactory
 import core.ui.BaseActivityPageChangeFragment
 import kotlinx.android.synthetic.main.activity_sao.*
 @Route(path = ActivitySwitch.Team.TEAM_ACT)
 class TeamActivity : BaseActivityPageChangeFragment() {
+    var skip by SPUtil(this,"skip",false)
 
     override fun frameLayoutId(): Int {
         return R.id.team_framelayout
@@ -27,21 +29,23 @@ class TeamActivity : BaseActivityPageChangeFragment() {
         lastPageInAnimation = R.anim.slide_right_out
         lastPageOutAnimation = R.anim.slide_left_in
         val createJoinTeamFragment = CreateJoinTeamFragment()
-        val bundle = Bundle()
-        bundle.putInt("skip",1)
-        createJoinTeamFragment.arguments=bundle
-        val registerFragment1 = registerFragment(createJoinTeamFragment)
+
+        registerFragment(createJoinTeamFragment)
         registerFragment(SelectJoinTeamFragment())
         registerFragment(TeamCodeFragment())
         registerFragment(TeamNameFragment())
-        val registerFragment = registerFragment(AddMemberFragment())
+        registerFragment(AddMemberFragment())
         registerFragment(AddMemberInfoFragment())
 
     }
 
     override fun initView() {
-        pageChange(0, fragments,true,nextPageInAnimation,nextPageOutAnimation,lastPageInAnimation,lastPageOutAnimation)
-
+            if (skip){
+                pageChange(4, fragments,true,nextPageInAnimation,nextPageOutAnimation,lastPageInAnimation,lastPageOutAnimation)
+            }else{
+                pageChange(0, fragments,true,nextPageInAnimation,nextPageOutAnimation,lastPageInAnimation,lastPageOutAnimation)
+                skip=true
+            }
     }
 
     override fun layoutID(): Int {
